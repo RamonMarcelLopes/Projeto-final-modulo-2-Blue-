@@ -13,6 +13,9 @@ nodemon;
 express;
 node.js;
 ejs;
+dotenv; 
+pg;
+sequelize
 
 # personal
 
