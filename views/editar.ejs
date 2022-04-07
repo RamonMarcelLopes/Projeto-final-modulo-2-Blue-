@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/editar.css">
+    <title> <%= filme.nome %> Editar</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/tAZw3FE.png">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    
+<main>
+
+    <form action="/editar/<%= filme.id %> " method="post">
+        <legend>Editar<%= filme.nome %> </legend>
+
+        <fieldset>
+        <input type="text" name="nome" value="<%= filme.nome %> ">
+        <label for="nome">nome</label>
+        </fieldset>
+
+        <fieldset>
+        <input type="text" name="ano" value="<%= filme.ano %> ">
+        <label for="ano">ano</label>
+        </fieldset>
+
+        <fieldset>
+        <input type="url" name="img" value="<%= filme.img %> ">
+        <label for="img">img</label>
+        </fieldset>
+
+        <fieldset>
+        <input type="text" name="diretores" value="<%= filme.diretores %> ">
+        <label for="diretores">diretores</label>
+        </fieldset>
+
+        <fieldset>
+        <input type="text" name="iframe"  value="<%= filme.iframe %> ">
+        <label for="iframe">iframe</label>
+        </fieldset>
+
+        <fieldset>
+        <input type="text" name="descricao" value="<%= filme.descricao %> ">
+        <label for="descricao"> descrição</label>
+        </fieldset>
+
+        <div>
+        <button type="submit"> enviar </button>
+        </div>
+
+    </form>
+
+
+</main>
+
+
+</body>
+</html>
+

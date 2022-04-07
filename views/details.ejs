@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/details.css" type="text/css">
+    <title> <%= filme.nome %> Detalhes</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/tAZw3FE.png">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+<main>
+    <iframe <%= filme.iframe%>> </iframe>
+    
+     
+    <div id="tabela-tudo">
+    <table>
+        
+             <h1 id="ficha"> Ficha Tecnica</h1>
+        
+       <tr>
+           <tr> 
+           <td> titulo </td>
+           <td> <%= filme.nome %> </td>
+           
+        </tr>
+            <tr>
+                <td>Dirigido por</td>
+                <td><%= filme.diretores %></td>
+            </tr>
+       </tr>
+    
+    <tr>
+        <td>ano de produção</td>
+        <td><%= filme.ano %> </td>
+    </tr>
+    <tr>
+        <td>descrição</td>
+        <td> <%= filme.descricao %> </td>
+    </tr>
+</table>
+
+</div>
+
+</main>
+
+
+</body>
+</html>
